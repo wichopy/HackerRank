@@ -1,0 +1,22 @@
+"""
+ Print elements of a linked list on console
+ head input could be None as well for empty list
+ Node is defined as
+ 
+ class Node(object):
+ 
+   def __init__(self, data=None, next_node=None):
+       self.data = data
+       self.next = next_node
+ 
+ 
+"""
+def print_list(head):
+    if head.next == None: #if no next node, means its a single node with no links.
+        return None
+    else:
+        #if a linked list, print all data values until last node detected.
+        while head.next != None:
+            print head.data
+            head=head.next
+        print head.data #print last node
